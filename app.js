@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const listSidebar = document.getElementById('list-sidebar');
     const listTitle = document.getElementById('list-title');
     const newListBtn = document.getElementById('new-list-btn');
+    const listDate = document.getElementById('list-date');
 
     let currentList = 'My Day';
     const lists = {
@@ -95,4 +96,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const sidebar = document.getElementById('sidebar');
         sidebar.classList.toggle('open');
     });
+
+    const setDefaultDate = () => {
+        const today = new Date().toISOString().split('T')[0];
+        listDate.value = today;
+    };
+
+    listDate.addEventListener('change', () => {
+        showMessage(`Date updated to ${listDate.value}`);
+    });
+
+    setDefaultDate();
 });
