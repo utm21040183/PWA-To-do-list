@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <h2>My Lists</h2>
+            <ul id="list-sidebar" class="list-sidebar">
+                <li class="active">My Day</li>
+                <li>Important</li>
+                <li>Planned</li>
+                <li>Tasks</li>
+                <li>Shopping</li>
+            </ul>
+            <button id="new-list-btn" class="new-list-btn">+ New List</button>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <h1 id="list-title">My Day</h1>
+                <p id="list-date">Tuesday, January 29</p>
+            </header>
+            <div class="container">
+                <form id="task-form">
+                    <input type="text" id="task-input" class="task-input" placeholder="Add a new task..." required>
+                    <button type="submit" class="add-btn">Add</button>
+                </form>
+                <ul id="task-list" class="task-list"></ul>
+                <div id="message" class="message"></div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
