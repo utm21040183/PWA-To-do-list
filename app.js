@@ -90,4 +90,9 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(() => console.log('Service Worker registered successfully.'))
             .catch((error) => console.error('Service Worker registration failed:', error));
     }
+
+    document.getElementById('menu-btn').addEventListener('click', () => {
+        const sidebar = document.getElementById('sidebar');
+        sidebar.classList.toggle('open');
+    });
 });
